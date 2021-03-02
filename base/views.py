@@ -65,7 +65,7 @@ def getUserProfile(request):
     serializer = UserSerializer(user, many=False)
     return Response(serializer.data)
 
-#get all users route
+#get all users route admin route
 @api_view(['GET'])
 @permission_classes([IsAdminUser])
 def getUsers(request):
